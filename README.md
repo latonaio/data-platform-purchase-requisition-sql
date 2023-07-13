@@ -10,7 +10,8 @@ data-platform-purchase-requisition-sql には、sqlの設定ファイルとし�
 
 * data-platform-purchase-requisition-sql-header-data.sql （データ連携基盤 購買依頼 - ヘッダデータ）
 * data-platform-purchase-requisition-sql-item-data.sql（データ連携基盤 購買依頼 - 明細データ）  
-* data-platform-purchase-requisition-sql-item-delivery-address-data.sql（データ連携基盤 購買依頼 - 明細入荷先住所データ）
+* data-platform-purchase-requisition-sql-partner-data.sql（データ連携基盤 購買依頼 - 取引先データ）
+* data-platform-purchase-requisition-sql-address-data.sql（データ連携基盤 購買依頼 - 住所データ）
 
 ## MySQLのセットアップ / Kubernetesの設定 / SQLテーブルの作成方法  
-MySQLのセットアップ / Kubernetesの設定 / 具体的なSQLテーブルの作成方法、については、[mysql-kube](https://github.com/latonaio/mysql-kube)を参照ください。  
+MySQLのセットアップ / Kubernetesの設定 / 具体的なSQLテーブルの作成方法、については、[mysql-kube](https://github.com/latonaio/mysql-kube)を参照ください。
