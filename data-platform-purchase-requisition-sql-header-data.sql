@@ -25,14 +25,14 @@ CREATE TABLE `data_platform_purchase_requisition_header_data`
     PRIMARY KEY (`PurchaseRequisition`),
     
     CONSTRAINT `DPFMPurchaseRequisitionHeaderDataBuyer_fk` FOREIGN KEY (`Buyer`) REFERENCES `data_platform_business_partner_general_data` (`BusinessPartner`),
-    CONSTRAINT `DPFMPurchaseRequisitionHeaderDataPlannedOrder_fk` FOREIGN KEY (`PlannedOrder`) REFERENCES `data_platform_planned_order_header_data` (`PlannedOrder`),
-    CONSTRAINT `DPFMPurchaseRequisitionHeaderDataPlannedOrderItem_fk` FOREIGN KEY (`PlannedOrder`, `PlannedOrderItem`) REFERENCES `data_platform_planned_order_item_data` (`PlannedOrder`, `PlannedOrderItem`),
+    -- CONSTRAINT `DPFMPurchaseRequisitionHeaderDataPlannedOrder_fk` FOREIGN KEY (`PlannedOrder`) REFERENCES `data_platform_planned_order_header_data` (`PlannedOrder`),
+    -- CONSTRAINT `DPFMPurchaseRequisitionHeaderDataPlannedOrderItem_fk` FOREIGN KEY (`PlannedOrder`, `PlannedOrderItem`) REFERENCES `data_platform_planned_order_item_data` (`PlannedOrder`, `PlannedOrderItem`),
     CONSTRAINT `DPFMPurchaseRequisitionHeaderDataProductionOrder_fk` FOREIGN KEY (`ProductionOrder`) REFERENCES `data_platform_production_order_header_data` (`ProductionOrder`),
     CONSTRAINT `DPFMPurchaseRequisitionHeaderDataProductionOrderItem_fk` FOREIGN KEY (`ProductionOrder`, `ProductionOrderItem`) REFERENCES `data_platform_production_order_item_data` (`ProductionOrder`, `ProductionOrder`),
     CONSTRAINT `DPFMPurchaseRequisitionHeaderDataPrecedingOrderID_fk` FOREIGN KEY (`PrecedingOrderID`) REFERENCES `data_platform_orders_header_data` (`OrderID`),
-    CONSTRAINT `DPFMPurchaseRequisitionHeaderDataPrecedingOrderItem_fk` FOREIGN KEY (`PrecedingOrderID`, `PrecedingOrderItem`) REFERENCES `data_platform_orders_item_data` (`OrderID`, `OrderItem`),
-    CONSTRAINT `DPFMPurchaseRequisitionHeaderDataProject_fk` FOREIGN KEY (`Project`) REFERENCES `data_platform_project_project_data` (`Project`),
-    CONSTRAINT `DPFMPurchaseRequisitionHeaderDataWBSElement_fk` FOREIGN KEY (`Project`, `WBSElement`) REFERENCES `data_platform_project_wbs_element_data` (`Project`, `WBSElement`)
+    CONSTRAINT `DPFMPurchaseRequisitionHeaderDataPrecedingOrderItem_fk` FOREIGN KEY (`PrecedingOrderID`, `PrecedingOrderItem`) REFERENCES `data_platform_orders_item_data` (`OrderID`, `OrderItem`)
+    -- CONSTRAINT `DPFMPurchaseRequisitionHeaderDataProject_fk` FOREIGN KEY (`Project`) REFERENCES `data_platform_project_project_data` (`Project`),
+    -- CONSTRAINT `DPFMPurchaseRequisitionHeaderDataWBSElement_fk` FOREIGN KEY (`Project`, `WBSElement`) REFERENCES `data_platform_project_wbs_element_data` (`Project`, `WBSElement`)
 
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4;

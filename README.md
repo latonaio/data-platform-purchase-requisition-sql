@@ -9,7 +9,9 @@ https://api.XXXXXXXX.com/api/OP_API_XXXXXXX_XXX/overview
 data-platform-purchase-requisition-sql には、sqlの設定ファイルとして、以下のファイルが含まれます。 
 
 * data-platform-purchase-requisition-sql-header-data.sql （データ連携基盤 購買依頼 - ヘッダデータ）
-* data-platform-purchase-requisition-sql-item-data.sql（データ連携基盤 購買依頼 - 明細データ）  
+* data-platform-purchase-requisition-sql-header-doc-data.sql （データ連携基盤 購買依頼 - ヘッダ文書データ）
+* data-platform-purchase-requisition-sql-item-data.sql（データ連携基盤 購買依頼 - 明細データ）
+* data-platform-purchase-requisition-sql-item-doc-data.sql （データ連携基盤 購買依頼 - 明細文書データ）
 * data-platform-purchase-requisition-sql-partner-data.sql（データ連携基盤 購買依頼 - 取引先データ）
 * data-platform-purchase-requisition-sql-address-data.sql（データ連携基盤 購買依頼 - 住所データ）
 

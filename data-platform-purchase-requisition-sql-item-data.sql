@@ -62,7 +62,7 @@ CREATE TABLE `data_platform_purchase_requisition_item_data`
     PRIMARY KEY (`PurchaseRequisition`, `PurchaseRequisitionItem`),
 
    CONSTRAINT `DPFMPurchaseRequisitionItemData_fk` FOREIGN KEY (`Buyer`, `PurchaseRequisition`) REFERENCES `data_platform_purchase_requisition_header_data` (`Buyer`, `PurchaseRequisition`),
-   CONSTRAINT `DPFMPurchaseRequisitionItemDataPlannedOrderItem_fk` FOREIGN KEY (`PlannedOrder`, `PlannedOrderItem`) REFERENCES `data_platform_planned_order_item_data` (`PlannedOrder`, `PlannedOrderItem`),
+-- CONSTRAINT `DPFMPurchaseRequisitionItemDataPlannedOrderItem_fk` FOREIGN KEY (`PlannedOrder`, `PlannedOrderItem`) REFERENCES `data_platform_planned_order_item_data` (`PlannedOrder`, `PlannedOrderItem`),
    CONSTRAINT `DPFMPurchaseRequisitionItemDataProductionOrderItem_fk` FOREIGN KEY (`ProductionOrder`, `ProductionOrderItem`) REFERENCES `data_platform_production_order_item_data` (`ProductionOrder`, `ProductionOrder`),
    CONSTRAINT `DPFMPurchaseRequisitionItemDataPrecedingOrderItem_fk` FOREIGN KEY (`PrecedingOrderID`, `PrecedingOrderItem`) REFERENCES `data_platform_orders_item_data` (`OrderID`, `OrderItem`),
    CONSTRAINT `DPFMPurchaseRequisitionItemDataFollowingOrderItem_fk` FOREIGN KEY (`FollowingOrderID`, `FollowingOrderItem`) REFERENCES `data_platform_orders_item_data` (`OrderID`, `OrderItem`),
@@ -78,8 +78,8 @@ CREATE TABLE `data_platform_purchase_requisition_item_data`
    CONSTRAINT `DPFMPurchaseRequisitionItemDataReceivingPlantStorageLocation_fk` FOREIGN KEY (`DeliverToParty`, `ReceivingPlant`, `ReceivingPlantStorageLocation`) REFERENCES `data_platform_plant_storage_location_data` (`BusinessPartner`, `Plant`, `StorageLocation`),
    CONSTRAINT `DPFMPurchaseRequisitionItemDataStockConfirmationPartnerFunction_fk` FOREIGN KEY (`StockConfirmationPartnerFunction`) REFERENCES `data_platform_partner_function_partner_function_data` (`PartnerFunction`),
    CONSTRAINT `DPFMPurchaseRequisitionItemDataStockConfirmationPlant_fk` FOREIGN KEY (`StockConfirmationBusinessPartner`, `StockConfirmationPlant`) REFERENCES `data_platform_plant_general_data` (`BusinessPartner`, `Plant`),
-   CONSTRAINT `DPFMPurchaseRequisitionItemDataStockConfirmationPlantBatch_fk` FOREIGN KEY (`Product`, `StockConfirmationBusinessPartner`, `StockConfirmationPlant`, `StockConfirmationPlantBatch`) REFERENCES `data_platform_batch_master_record_batch_data` (`Product`, `BusinessPartner`, `Plant`, `Batch`),
-   CONSTRAINT `DPFMPurchaseRequisitionItemDataReservationItem_fk` FOREIGN KEY (`Reservation`, `ReservationItem`) REFERENCES `data_platform_reservation_document_item_data` (`Reservation`, `ReservationItem`)
+   CONSTRAINT `DPFMPurchaseRequisitionItemDataStockConfirmationPlantBatch_fk` FOREIGN KEY (`Product`, `StockConfirmationBusinessPartner`, `StockConfirmationPlant`, `StockConfirmationPlantBatch`) REFERENCES `data_platform_batch_master_record_batch_data` (`Product`, `BusinessPartner`, `Plant`, `Batch`)
+-- CONSTRAINT `DPFMPurchaseRequisitionItemDataReservationItem_fk` FOREIGN KEY (`Reservation`, `ReservationItem`) REFERENCES `data_platform_reservation_document_item_data` (`Reservation`, `ReservationItem`)
 
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4;

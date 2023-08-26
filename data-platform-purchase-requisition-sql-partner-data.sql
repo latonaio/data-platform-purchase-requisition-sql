@@ -14,13 +14,13 @@ CREATE TABLE `data_platform_purchase_requisition_partner_data`
     
     PRIMARY KEY (`PurchaseRequisition`, `PartnerFunction`, `BusinessPartner`),
     
-    CONSTRAINT `DataPlatformPurchaseRequisitionPartnerData_fk` FOREIGN KEY (`PurchaseRequisition`) REFERENCES `data_platform_purchase_requisition_header_data` (`PurchaseRequisition`),
-    CONSTRAINT `DataPlatformPurchaseRequisitionPartnerDataPartnerFunction_fk` FOREIGN KEY (`PartnerFunction`) REFERENCES `data_platform_partner_function_partner_function_data` (`PartnerFunction`),
-    CONSTRAINT `DataPlatformPurchaseRequisitionPartnerDataBusinessPartner_fk` FOREIGN KEY (`BusinessPartner`) REFERENCES `data_platform_business_partner_general_data` (`BusinessPartner`),
-    CONSTRAINT `DataPlatformPurchaseRequisitionPartnerDataCountry_fk` FOREIGN KEY (`Country`) REFERENCES `data_platform_country_country_data` (`Country`),
-    CONSTRAINT `DataPlatformPurchaseRequisitionPartnerDataLanguage_fk` FOREIGN KEY (`Language`) REFERENCES `data_platform_language_language_data` (`Language`),
-    CONSTRAINT `DataPlatformPurchaseRequisitionPartnerDataCurrency_fk` FOREIGN KEY (`Currency`) REFERENCES `data_platform_currency_currency_data` (`Currency`),
-    CONSTRAINT `DataPlatformPurchaseRequisitionPartnerDataAddressID_fk` FOREIGN KEY (`AddressID`) REFERENCES `data_platform_address_address_data` (`AddressID`)
+    CONSTRAINT `DPFMPurchaseRequisitionPartnerData_fk` FOREIGN KEY (`PurchaseRequisition`) REFERENCES `data_platform_purchase_requisition_header_data` (`PurchaseRequisition`),
+    CONSTRAINT `DPFMPurchaseRequisitionPartnerDataPartnerFunction_fk` FOREIGN KEY (`PartnerFunction`) REFERENCES `data_platform_partner_function_partner_function_data` (`PartnerFunction`),
+    CONSTRAINT `DPFMPurchaseRequisitionPartnerDataBusinessPartner_fk` FOREIGN KEY (`BusinessPartner`) REFERENCES `data_platform_business_partner_general_data` (`BusinessPartner`),
+    CONSTRAINT `DPFMPurchaseRequisitionPartnerDataCountry_fk` FOREIGN KEY (`Country`) REFERENCES `data_platform_country_country_data` (`Country`),
+    CONSTRAINT `DPFMPurchaseRequisitionPartnerDataLanguage_fk` FOREIGN KEY (`Language`) REFERENCES `data_platform_language_language_data` (`Language`),
+    CONSTRAINT `DPFMPurchaseRequisitionPartnerDataCurrency_fk` FOREIGN KEY (`Currency`) REFERENCES `data_platform_currency_currency_data` (`Currency`),
+    CONSTRAINT `DPFMPurchaseRequisitionPartnerDataAddressID_fk` FOREIGN KEY (`AddressID`) REFERENCES `data_platform_address_address_data` (`AddressID`)
 
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4;

@@ -14,8 +14,8 @@ CREATE TABLE `data_platform_purchase_requisition_address_data`
     
     PRIMARY KEY (`PurchaseRequisition`, `AddressID`),
     
-    CONSTRAINT `DataPlatformPurchaseRequisitionAddressData_fk` FOREIGN KEY (`PurchaseRequisition`) REFERENCES `data_platform_purchase_requisition_header_data` (`PurchaseRequisition`),
-    CONSTRAINT `DataPlatformPurchaseRequisitionAddressDataAddressID_fk` FOREIGN KEY (`AddressID`) REFERENCES `data_platform_address_address_data` (`AddressID`)
+    CONSTRAINT `DPFMPurchaseRequisitionAddressData_fk` FOREIGN KEY (`PurchaseRequisition`) REFERENCES `data_platform_purchase_requisition_header_data` (`PurchaseRequisition`),
+    CONSTRAINT `DPFMPurchaseRequisitionAddressDataAddressID_fk` FOREIGN KEY (`AddressID`) REFERENCES `data_platform_address_address_data` (`AddressID`)
 
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4;
